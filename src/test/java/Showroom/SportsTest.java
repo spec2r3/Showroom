@@ -1,5 +1,9 @@
 package Showroom;
-
+import java. util. Scanner;
+import io.cucumber.core.gherkin.Feature;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.*;
@@ -54,4 +58,21 @@ public class SportsTest {
     @Test
     public void getModel() {
     }
+    @Given("I go to enquire")
+    public void iGoToEnquire() {
+        assertEquals(Car.enquiry(),"I go to enquire");
+    }
+    @Given("I enter BMW as car Make and M4 as the car Model")
+    public void i_enter_bmw_as_car_make_and_m4_as_the_car_model() {
+        Sports testCar = new Sports(500,"BMW","M4");
+    }
+    @Then("I should see the car specifications")
+    public void i_should_see_the_car_specifications() {
+        Sports testCar = new Sports(500,"BMW","M4");
+        testCar.getMake();
+        testCar.getModel();
+        testCar.getBhp();
+
+    }
+
 }

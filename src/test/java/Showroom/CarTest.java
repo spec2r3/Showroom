@@ -23,7 +23,10 @@ class CarTest {
             }
         };
 
-        assertEquals("Has Doors", Car.doors(), "Has Doors");
+
+
+
+
 
     }
 }
